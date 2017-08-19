@@ -1,0 +1,903 @@
+rittal-cmc-tc:
+  walk:
+  - 1.3.6.1.2.1.1.3
+  - 1.3.6.1.4.1.2606
+  metrics:
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+  - name: cmcTcMibMajRev
+    oid: 1.3.6.1.4.1.2606.4.1.1
+    type: gauge
+  - name: cmcTcMibMinRev
+    oid: 1.3.6.1.4.1.2606.4.1.2
+    type: gauge
+  - name: cmcTcMibCondition
+    oid: 1.3.6.1.4.1.2606.4.1.3
+    type: gauge
+  - name: cmcTcUnit1NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.1
+    type: gauge
+  - name: unit1SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: cmcTcUnit1NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.1
+    type: gauge
+  - name: unit1OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: cmcTcUnit1NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.1
+    type: gauge
+  - name: unit1MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.2
+    type: DisplayString
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.3
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.10
+    type: gauge
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: cmcTcUnit1TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.3.1
+    type: gauge
+  - name: cmcTcUnit1Text
+    oid: 1.3.6.1.4.1.2606.4.2.3.2
+    type: DisplayString
+  - name: cmcTcUnit1Serial
+    oid: 1.3.6.1.4.1.2606.4.2.3.3
+    type: gauge
+  - name: cmcTcUnit1Status
+    oid: 1.3.6.1.4.1.2606.4.2.3.4
+    type: gauge
+  - name: cmcTcUnit2NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.1
+    type: gauge
+  - name: unit2SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: cmcTcUnit2NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.1
+    type: gauge
+  - name: unit2OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: cmcTcUnit2NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.1
+    type: gauge
+  - name: unit2MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.2
+    type: DisplayString
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.3
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.10
+    type: gauge
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: cmcTcUnit2TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.4.1
+    type: gauge
+  - name: cmcTcUnit2Text
+    oid: 1.3.6.1.4.1.2606.4.2.4.2
+    type: DisplayString
+  - name: cmcTcUnit2Serial
+    oid: 1.3.6.1.4.1.2606.4.2.4.3
+    type: gauge
+  - name: cmcTcUnit2Status
+    oid: 1.3.6.1.4.1.2606.4.2.4.4
+    type: gauge
+  - name: cmcTcUnit3NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.1
+    type: gauge
+  - name: unit3SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: cmcTcUnit3NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.1
+    type: gauge
+  - name: unit3OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: cmcTcUnit3NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.1
+    type: gauge
+  - name: unit3MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.2
+    type: DisplayString
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.3
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.10
+    type: gauge
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: cmcTcUnit3TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.5.1
+    type: gauge
+  - name: cmcTcUnit3Text
+    oid: 1.3.6.1.4.1.2606.4.2.5.2
+    type: DisplayString
+  - name: cmcTcUnit3Serial
+    oid: 1.3.6.1.4.1.2606.4.2.5.3
+    type: gauge
+  - name: cmcTcUnit3Status
+    oid: 1.3.6.1.4.1.2606.4.2.5.4
+    type: gauge
+  - name: cmcTcUnit4NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.1
+    type: gauge
+  - name: unit4SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: cmcTcUnit4NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.1
+    type: gauge
+  - name: unit4OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.2
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: cmcTcUnit4NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.1
+    type: gauge
+  - name: unit4MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.1
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.2
+    type: DisplayString
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.3
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.4
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.5
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.6
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.7
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.8
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.9
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.10
+    type: gauge
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: cmcTcUnit4TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.6.1
+    type: gauge
+  - name: cmcTcUnit4Text
+    oid: 1.3.6.1.4.1.2606.4.2.6.2
+    type: DisplayString
+  - name: cmcTcUnit4Serial
+    oid: 1.3.6.1.4.1.2606.4.2.6.3
+    type: gauge
+  - name: cmcTcUnit4Status
+    oid: 1.3.6.1.4.1.2606.4.2.6.4
+    type: gauge
+  - name: cmcTcValuesRelay
+    oid: 1.3.6.1.4.1.2606.4.2.7.1
+    type: gauge
+  - name: cmcTcValuesBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.7.2
+    type: gauge
+  - name: cmcTcValuesTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.7.3
+    type: gauge
+  - name: cmcTcValuesTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.7.4
+    type: gauge
+  - name: cmcTcValuesTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.7.5
+    type: gauge
+  - name: cmcTcValuesTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.7.6
+    type: gauge
+  - name: cmcTcNumberOfValues
+    oid: 1.3.6.1.4.1.2606.4.2.7.7
+    type: gauge
+  - name: valuesIndex
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.1
+    type: gauge
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesText
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.2
+    type: DisplayString
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesStatus
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.3
+    type: gauge
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesValue
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.4
+    type: gauge
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.5
+    type: gauge
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.6
+    type: gauge
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: cmcTcStatusDeviceCMC
+    oid: 1.3.6.1.4.1.2606.4.2.1
+    type: gauge
+  - name: cmcTcUnitsConnected
+    oid: 1.3.6.1.4.1.2606.4.2.2
+    type: gauge
+  - name: cmcTcTimerNumber
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.1
+    type: gauge
+  - name: cmcTcTimerIndex
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.1
+    type: gauge
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerStatus
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.2
+    type: gauge
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerDayOfWeek
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.3
+    type: gauge
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeOn
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.4
+    type: DisplayString
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeOff
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.5
+    type: DisplayString
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeControl
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.6
+    type: gauge
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerFunction
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.7
+    type: gauge
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcSetTempUnit
+    oid: 1.3.6.1.4.1.2606.4.3.1.1
+    type: gauge
+  - name: cmcTcSetBeeper
+    oid: 1.3.6.1.4.1.2606.4.3.1.2
+    type: gauge
+  - name: cmcTcQuitRelay
+    oid: 1.3.6.1.4.1.2606.4.3.1.3
+    type: gauge
+  - name: cmcTcLogicRelay
+    oid: 1.3.6.1.4.1.2606.4.3.1.4
+    type: gauge
+  - name: cmcTcWebAccess
+    oid: 1.3.6.1.4.1.2606.4.3.1.5
+    type: gauge
+  - name: cmcTcSetupDate
+    oid: 1.3.6.1.4.1.2606.4.3.1.6
+    type: DisplayString
+  - name: cmcTcSetupTime
+    oid: 1.3.6.1.4.1.2606.4.3.1.7
+    type: DisplayString
+  - name: cmcTcTraptableNumber
+    oid: 1.3.6.1.4.1.2606.4.4.7.1
+    type: gauge
+  - name: trapIndex
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.1
+    type: gauge
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: trapStatus
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.2
+    type: gauge
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: trapIPaddress
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.3
+    type: DisplayString
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: cmcTcQuitUnit
+    oid: 1.3.6.1.4.1.2606.4.5.1
+    type: gauge
+  version: 1

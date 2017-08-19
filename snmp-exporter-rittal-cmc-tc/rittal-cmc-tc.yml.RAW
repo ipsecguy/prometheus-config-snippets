@@ -1,0 +1,1211 @@
+rittal-cmc-tc:
+  walk:
+  - 1.3.6.1.2.1.1.3
+  - 1.3.6.1.4.1.2606
+  metrics:
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+    help: The time (in hundredths of a second) since the network management portion
+      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
+  - name: cmcTcMibMajRev
+    oid: 1.3.6.1.4.1.2606.4.1.1
+    type: gauge
+    help: The Major Revision level - 1.3.6.1.4.1.2606.4.1.1
+  - name: cmcTcMibMinRev
+    oid: 1.3.6.1.4.1.2606.4.1.2
+    type: gauge
+    help: The Minor Revision level - 1.3.6.1.4.1.2606.4.1.2
+  - name: cmcTcMibCondition
+    oid: 1.3.6.1.4.1.2606.4.1.3
+    type: gauge
+    help: The overall condition (status) of the system represented by this MIB - 1.3.6.1.4.1.2606.4.1.3
+  - name: cmcTcUnit1NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.1
+    type: gauge
+    help: Number of sensors connected to sensor unit 1 - 1.3.6.1.4.1.2606.4.2.3.5.1
+  - name: unit1SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.1
+    type: gauge
+    help: Index for the list of value entries - 1.3.6.1.4.1.2606.4.2.3.5.2.1.1
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.2
+    type: gauge
+    help: 'Type of sensor which is connected to sensor unit 1 to sensor[unit1SensorIndex]
+      1: no sensor connected 2: sensor failure 3: value overflow 4: sensor type 1,
+      access sensor 5: sensor type 2, vibration sensor 6: sensor type 3, motion sensor
+      7: sensor type 4, smoke sensor 8: sensor type 5, air flow sensor 9: sensor type
+      6, reserved 10: sensor type 7, temperature sensor 11: sensor type 8, 4..20mA
+      sensor 12: sensor type 9, humidity sensor 13: user sensor with normally opened
+      contact 14: user sensor with normally closed contact 15: door locked sensor
+      from locking device 16: remote unlock sensor (e.g - 1.3.6.1.4.1.2606.4.2.3.5.2.1.2'
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.3
+    type: OctetString
+    help: Descriptional text for each sensor (entry in the table) - 1.3.6.1.4.1.2606.4.2.3.5.2.1.3
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.4
+    type: gauge
+    help: Actual status of the sensor - 1.3.6.1.4.1.2606.4.2.3.5.2.1.4
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.5
+    type: gauge
+    help: Value of sensor - 1.3.6.1.4.1.2606.4.2.3.5.2.1.5
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.6
+    type: gauge
+    help: Value for high setpoint of sensor - 1.3.6.1.4.1.2606.4.2.3.5.2.1.6
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.7
+    type: gauge
+    help: Value for low setpoint of sensor, also used as alarm delay - 1.3.6.1.4.1.2606.4.2.3.5.2.1.7
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: unit1SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.3.5.2.1.8
+    type: gauge
+    help: Value for warning setpoint of sensor, also used as fan threshold - 1.3.6.1.4.1.2606.4.2.3.5.2.1.8
+    indexes:
+    - labelname: unit1SensorIndex
+      type: gauge
+  - name: cmcTcUnit1NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.1
+    type: gauge
+    help: Number of outputs available on sensor unit 1 - 1.3.6.1.4.1.2606.4.2.3.6.1
+  - name: unit1OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.1
+    type: gauge
+    help: Index for the list of output entries - 1.3.6.1.4.1.2606.4.2.3.6.2.1.1
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.2
+    type: gauge
+    help: 'Type of output which is connected to sensor unit 1 to output[unit1OutputIndex]
+      1: no output connected 2: output failure 3: value overflow 4: output type 1,
+      door locking TS8,Ergoform 5: output type 2, universal lock 1, lock with power
+      6: output type 3, universal lock 2, unlock with power 7: output type 4, fan
+      relay 8: output type 5, fan controlled 9: output type 6, universal relay output
+      10: output type 7, room door lock 11: output type 8, power output 12: output
+      type 9, door lock with Master key 13: output type 10, door lock FR(i) 14: setpoint
+      (FCS, LCP) 15: setpoint temperature monitoring (LCP) 16: hysteresis of setpoint
+      (LCP) 17: command for remote control of RCT 18: relay PSM, 1=On, 0=Off 19: high
+      setpoint current monitoring PSM 20: low setpoint current monitoring PSM 21:
+      setpoint temperature RTT 22: setpoint temperature monitoring RTT 23: power output
+      20A 30: control mode, LCP 31: min fan speed (fan control), LCP 32: min delta
+      T (fan control), LCP 33: max delta T (fan control), LCP 34: PID controller,
+      KP, LCP 35: PID controller, KI, LCP 36 PID controller, KD, LCP 37 flowrate flowmeter,
+      LCP 38: cw value of water (default: 4187), LCP 39: deltaT, LCP 40: control mode,
+      LCP 42: setpoint high voltage PSM 43: setpoint low voltage PSM 44: setpoint
+      high current PSM 45: setpoint low current PSM 46: command PSM - 1.3.6.1.4.1.2606.4.2.3.6.2.1.2'
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.3
+    type: OctetString
+    help: Descriptional text for each output (entry in the table) - 1.3.6.1.4.1.2606.4.2.3.6.2.1.3
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.4
+    type: gauge
+    help: Actual status of the output - 1.3.6.1.4.1.2606.4.2.3.6.2.1.4
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.5
+    type: gauge
+    help: Value for output - 1.3.6.1.4.1.2606.4.2.3.6.2.1.5
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.6
+    type: gauge
+    help: Command for output - 1.3.6.1.4.1.2606.4.2.3.6.2.1.6
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.7
+    type: gauge
+    help: 'Configuration for output 1: disable remote control (e.g - 1.3.6.1.4.1.2606.4.2.3.6.2.1.7'
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.8
+    type: gauge
+    help: Unsigned Value for delay, after this time the output will fall into the
+      previous state - 1.3.6.1.4.1.2606.4.2.3.6.2.1.8
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: unit1OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.3.6.2.1.9
+    type: gauge
+    help: State for output if timeout (RS422) occurs - 1.3.6.1.4.1.2606.4.2.3.6.2.1.9
+    indexes:
+    - labelname: unit1OutputIndex
+      type: gauge
+  - name: cmcTcUnit1NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.1
+    type: gauge
+    help: Number of messages that can be created with sensor unit 1 - 1.3.6.1.4.1.2606.4.2.3.7.1
+  - name: unit1MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.1
+    type: gauge
+    help: Index for the list of message entries - 1.3.6.1.4.1.2606.4.2.3.7.2.1.1
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.2
+    type: OctetString
+    help: Descriptional text for each message (entry in the table) - 1.3.6.1.4.1.2606.4.2.3.7.2.1.2
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.3
+    type: gauge
+    help: 'Actual message status 1: not available 2: configuration has changed (sensor
+      new, changed, lost) 3: error 4: OK 5: alarm, e.g - 1.3.6.1.4.1.2606.4.2.3.7.2.1.3'
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.4
+    type: gauge
+    help: 'Setup of Alarm relay for this message/alarm 1: no switching of alarm relay
+      2: switching of alarm relay - 1.3.6.1.4.1.2606.4.2.3.7.2.1.4'
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.5
+    type: gauge
+    help: 'Setup of Alarm beeper for this alarm 1: no audible alarm 2: audible alarm
+      - 1.3.6.1.4.1.2606.4.2.3.7.2.1.5'
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.6
+    type: gauge
+    help: Trap receiver 1 activated - 1.3.6.1.4.1.2606.4.2.3.7.2.1.6
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.7
+    type: gauge
+    help: Trap receiver 2 activated - 1.3.6.1.4.1.2606.4.2.3.7.2.1.7
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.8
+    type: gauge
+    help: Trap receiver 3 activated - 1.3.6.1.4.1.2606.4.2.3.7.2.1.8
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.9
+    type: gauge
+    help: Trap receiver 4 and Event Logging activated - 1.3.6.1.4.1.2606.4.2.3.7.2.1.9
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: unit1MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.3.7.2.1.10
+    type: gauge
+    help: 'Reset of this alarm 1: auto 2: manual, alarm needs confirmation, e - 1.3.6.1.4.1.2606.4.2.3.7.2.1.10'
+    indexes:
+    - labelname: unit1MsgIndex
+      type: gauge
+  - name: cmcTcUnit1TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.3.1
+    type: gauge
+    help: Type of sensor unit connected to port 1 - 1.3.6.1.4.1.2606.4.2.3.1
+  - name: cmcTcUnit1Text
+    oid: 1.3.6.1.4.1.2606.4.2.3.2
+    type: OctetString
+    help: Descriptional text for sensor unit connected to port 1 - 1.3.6.1.4.1.2606.4.2.3.2
+  - name: cmcTcUnit1Serial
+    oid: 1.3.6.1.4.1.2606.4.2.3.3
+    type: gauge
+    help: Serialnumber of sensor unit connected to port 1 - 1.3.6.1.4.1.2606.4.2.3.3
+  - name: cmcTcUnit1Status
+    oid: 1.3.6.1.4.1.2606.4.2.3.4
+    type: gauge
+    help: General Status sensor unit connected to port 1 (1) OK (2) error, e - 1.3.6.1.4.1.2606.4.2.3.4
+  - name: cmcTcUnit2NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.1
+    type: gauge
+    help: Number of sensors connected to sensor unit 2 - 1.3.6.1.4.1.2606.4.2.4.5.1
+  - name: unit2SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.1
+    type: gauge
+    help: Index for the list of value entries - 1.3.6.1.4.1.2606.4.2.4.5.2.1.1
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.2
+    type: gauge
+    help: 'Type of sensor which is connected to sensor unit 2 to sensor[unit2SensorIndex]
+      1: no sensor connected 2: sensor failure 3: value overflow 4: sensor type 1,
+      access sensor 5: sensor type 2, vibration sensor 6: sensor type 3, motion sensor
+      7: sensor type 4, smoke sensor 8: sensor type 5, air flow sensor 9: sensor type
+      6, reserved 10: sensor type 7, temperature sensor 11: sensor type 8, 4..20mA
+      sensor 12: sensor type 9, humidity sensor 13: user sensor with normally opened
+      contact 14: user sensor with normally closed contact 15: door locked sensor
+      from locking device 16: remote unlock sensor (e.g - 1.3.6.1.4.1.2606.4.2.4.5.2.1.2'
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.3
+    type: OctetString
+    help: Descriptional text for each sensor (entry in the table) - 1.3.6.1.4.1.2606.4.2.4.5.2.1.3
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.4
+    type: gauge
+    help: Actual status of the sensor - 1.3.6.1.4.1.2606.4.2.4.5.2.1.4
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.5
+    type: gauge
+    help: Value of sensor - 1.3.6.1.4.1.2606.4.2.4.5.2.1.5
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.6
+    type: gauge
+    help: Value for high setpoint of sensor - 1.3.6.1.4.1.2606.4.2.4.5.2.1.6
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.7
+    type: gauge
+    help: Value for low setpoint of sensor, also used as alarm delay - 1.3.6.1.4.1.2606.4.2.4.5.2.1.7
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: unit2SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.4.5.2.1.8
+    type: gauge
+    help: Value for warning setpoint of sensor, also used as fan threshold - 1.3.6.1.4.1.2606.4.2.4.5.2.1.8
+    indexes:
+    - labelname: unit2SensorIndex
+      type: gauge
+  - name: cmcTcUnit2NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.1
+    type: gauge
+    help: Number of outputs available on sensor unit 2 - 1.3.6.1.4.1.2606.4.2.4.6.1
+  - name: unit2OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.1
+    type: gauge
+    help: Index for the list of output entries - 1.3.6.1.4.1.2606.4.2.4.6.2.1.1
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.2
+    type: gauge
+    help: 'Type of output which is connected to sensor unit 2 to output[unit2OutputIndex]
+      1: no output connected 2: output failure 3: value overflow 4: output type 1,
+      door locking TS8,Ergoform 5: output type 2, universal lock 1, lock with power
+      6: output type 3, universal lock 2, unlock with power 7: output type 4, fan
+      relay 8: output type 5, fan controlled 9: output type 6, universal relay output
+      10: output type 7, room door lock 11: output type 8, power output 12: output
+      type 9, door lock with Master key 13: output type 10, door lock FR(i) 14: setpoint
+      (FCS, RTT) 15: setpoint temperature monitoring (RTT) 16: hysteresis of setpoint
+      (RCT) 17: command for remote control of RCT 18: relay PSM, 1=On, 0=Off 19: high
+      setpoint current monitoring PSM 20: low setpoint current monitoring PSM 21:
+      setpoint temperature RTT 22: setpoint temperature monitoring RTT 23: power output
+      20A 30: control mode LCP 31: min fan speed (fan control) LCP 32: min delta T
+      (fan control) LCP 33: max delta T (fan control) LCP 34: PID controller, KP,
+      LCP 35: PID controller, KI, LCP 36 PID controller, KD, LCP 37 flowrate flowmeter,
+      LCP 38: cw value of water (default: 4187) LCP 39: deltaT, LCP 40: control mode,
+      LCP 42: setpoint high voltage PSM 43: setpoint low voltage PSM 44: setpoint
+      high current PSM 45: setpoint low current PSM 46: command PSM - 1.3.6.1.4.1.2606.4.2.4.6.2.1.2'
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.3
+    type: OctetString
+    help: Descriptional text for each output (entry in the table) - 1.3.6.1.4.1.2606.4.2.4.6.2.1.3
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.4
+    type: gauge
+    help: Actual status of the output - 1.3.6.1.4.1.2606.4.2.4.6.2.1.4
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.5
+    type: gauge
+    help: Signed value for output - 1.3.6.1.4.1.2606.4.2.4.6.2.1.5
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.6
+    type: gauge
+    help: Command for output - 1.3.6.1.4.1.2606.4.2.4.6.2.1.6
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.7
+    type: gauge
+    help: 'Configuration for output 1: disable remote control (e.g - 1.3.6.1.4.1.2606.4.2.4.6.2.1.7'
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.8
+    type: gauge
+    help: Unsigned Value for delay, after this time the output will fall into the
+      previous state - 1.3.6.1.4.1.2606.4.2.4.6.2.1.8
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: unit2OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.4.6.2.1.9
+    type: gauge
+    help: State for output if timeout (RS422) occurs - 1.3.6.1.4.1.2606.4.2.4.6.2.1.9
+    indexes:
+    - labelname: unit2OutputIndex
+      type: gauge
+  - name: cmcTcUnit2NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.1
+    type: gauge
+    help: Number of alarms that can be created with sensor unit 2 - 1.3.6.1.4.1.2606.4.2.4.7.1
+  - name: unit2MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.1
+    type: gauge
+    help: Index for the list of alarm entries - 1.3.6.1.4.1.2606.4.2.4.7.2.1.1
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.2
+    type: OctetString
+    help: Descriptional text for each message (entry in the table) - 1.3.6.1.4.1.2606.4.2.4.7.2.1.2
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.3
+    type: gauge
+    help: 'Actual message status 1: not available 2: configuration has changed (sensor
+      new, changed, lost) 3: error 4: OK 5: alarm, e.g - 1.3.6.1.4.1.2606.4.2.4.7.2.1.3'
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.4
+    type: gauge
+    help: 'Setup of Alarm relay for this alarm 2: no switching of alarm relay 1: switching
+      of alarm relay - 1.3.6.1.4.1.2606.4.2.4.7.2.1.4'
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.5
+    type: gauge
+    help: 'Setup of Alarm beeper for this alarm 2: no audible alarm 1: audible alarm
+      - 1.3.6.1.4.1.2606.4.2.4.7.2.1.5'
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.6
+    type: gauge
+    help: Trap receiver 1 activated - 1.3.6.1.4.1.2606.4.2.4.7.2.1.6
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.7
+    type: gauge
+    help: Trap receiver 2 activated - 1.3.6.1.4.1.2606.4.2.4.7.2.1.7
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.8
+    type: gauge
+    help: Trap receiver 3 activated - 1.3.6.1.4.1.2606.4.2.4.7.2.1.8
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.9
+    type: gauge
+    help: Trap receiver 4 and Event Logging activated - 1.3.6.1.4.1.2606.4.2.4.7.2.1.9
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: unit2MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.4.7.2.1.10
+    type: gauge
+    help: 'Reset of this alarm 1: auto 2: manual, alarm needs confirmation, e - 1.3.6.1.4.1.2606.4.2.4.7.2.1.10'
+    indexes:
+    - labelname: unit2MsgIndex
+      type: gauge
+  - name: cmcTcUnit2TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.4.1
+    type: gauge
+    help: Type of sensor unit connected to port 2 - 1.3.6.1.4.1.2606.4.2.4.1
+  - name: cmcTcUnit2Text
+    oid: 1.3.6.1.4.1.2606.4.2.4.2
+    type: OctetString
+    help: Descriptional text for sensor unit connected to port 2 - 1.3.6.1.4.1.2606.4.2.4.2
+  - name: cmcTcUnit2Serial
+    oid: 1.3.6.1.4.1.2606.4.2.4.3
+    type: gauge
+    help: Serialnumber of sensor unit connected to port 2 - 1.3.6.1.4.1.2606.4.2.4.3
+  - name: cmcTcUnit2Status
+    oid: 1.3.6.1.4.1.2606.4.2.4.4
+    type: gauge
+    help: General Status sensor unit connected to port 2 (1) OK (2) error (3) configuration
+      of sensor unit has changed, confirmation required (4) Quit from sensor unit
+      to confirm configuration changes (5) timeout of sensor unit, confirmation required
+      (6) sensor unit detected, needs to be confirmed (8) supply voltage is too low
+      - 1.3.6.1.4.1.2606.4.2.4.4
+  - name: cmcTcUnit3NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.1
+    type: gauge
+    help: Number of sensors connected to sensor unit 3 - 1.3.6.1.4.1.2606.4.2.5.5.1
+  - name: unit3SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.1
+    type: gauge
+    help: Index for the list of value entries - 1.3.6.1.4.1.2606.4.2.5.5.2.1.1
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.2
+    type: gauge
+    help: 'Type of sensor which is connected to sensor unit 3 to sensor[unit3SensorIndex]
+      1: no sensor connected 2: sensor failure 3: value overflow 4: sensor type 1,
+      access sensor 5: sensor type 2, vibration sensor 6: sensor type 3, motion sensor
+      7: sensor type 4, smoke sensor 8: sensor type 5, air flow sensor 9: sensor type
+      6, reserved 10: sensor type 7, temperature sensor 11: sensor type 8, 4..20mA
+      sensor 12: sensor type 9, humidity sensor 13: user sensor with normally opened
+      contact 14: user sensor with normally closed contact 15: door locked sensor
+      from locking device 16: remote unlock sensor (e.g - 1.3.6.1.4.1.2606.4.2.5.5.2.1.2'
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.3
+    type: OctetString
+    help: Descriptional text for each sensor (entry in the table) - 1.3.6.1.4.1.2606.4.2.5.5.2.1.3
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.4
+    type: gauge
+    help: Actual status of the sensor - 1.3.6.1.4.1.2606.4.2.5.5.2.1.4
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.5
+    type: gauge
+    help: Value of sensor - 1.3.6.1.4.1.2606.4.2.5.5.2.1.5
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.6
+    type: gauge
+    help: Value for high setpoint of sensor - 1.3.6.1.4.1.2606.4.2.5.5.2.1.6
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.7
+    type: gauge
+    help: Value for low setpoint of sensor - 1.3.6.1.4.1.2606.4.2.5.5.2.1.7
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: unit3SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.5.5.2.1.8
+    type: gauge
+    help: Value for warning setpoint of sensor, also used as fan threshold - 1.3.6.1.4.1.2606.4.2.5.5.2.1.8
+    indexes:
+    - labelname: unit3SensorIndex
+      type: gauge
+  - name: cmcTcUnit3NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.1
+    type: gauge
+    help: Number of outputs available on sensor unit 3 - 1.3.6.1.4.1.2606.4.2.5.6.1
+  - name: unit3OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.1
+    type: gauge
+    help: Index for the list of output entries - 1.3.6.1.4.1.2606.4.2.5.6.2.1.1
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.2
+    type: gauge
+    help: 'Type of output which is connected to sensor unit 3 to output[unit3OutputIndex]
+      1: no output connected 2: output failure 3: value overflow 4: output type 1,
+      door locking TS8,Ergoform 5: output type 2, universal lock 1, lock with power
+      6: output type 3, universal lock 2, unlock with power 7: output type 4, fan
+      relay 8: output type 5, fan controlled 9: output type 6, universal relay output
+      10: output type 7, room door lock 11: output type 8, power output 12: output
+      type 9, door lock with Master key 13: output type 10, door lock FR(i) 14: setpoint
+      (FCS, RTT) 15: setpoint temperature monitoring (RTT) 16: hysteresis of setpoint
+      (RCT) 17: command for remote control of RCT 18: relay PSM, 1=On, 0=Off 19: high
+      setpoint current monitoring PSM 20: low setpoint current monitoring PSM 21:
+      setpoint temperature RTT 22: setpoint temperature monitoring RTT 23: power output
+      20A 30: control mode LCP 31: min fan speed (fan control) LCP 32: min delta T
+      (fan control) LCP 33: max delta T (fan control) LCP 34: PID controller, KP,
+      LCP 35: PID controller, KI, LCP 36 PID controller, KD, LCP 37 flowrate flowmeter,
+      LCP 38: cw value of water (default: 4187) LCP 39: deltaT, LCP 40: control mode,
+      LCP 42: setpoint high voltage PSM 43: setpoint low voltage PSM 44: setpoint
+      high current PSM 45: setpoint low current PSM 46: command PSM - 1.3.6.1.4.1.2606.4.2.5.6.2.1.2'
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.3
+    type: OctetString
+    help: Descriptional text for each output (entry in the table) - 1.3.6.1.4.1.2606.4.2.5.6.2.1.3
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.4
+    type: gauge
+    help: Actual status of the output - 1.3.6.1.4.1.2606.4.2.5.6.2.1.4
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.5
+    type: gauge
+    help: Value for output - 1.3.6.1.4.1.2606.4.2.5.6.2.1.5
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.6
+    type: gauge
+    help: Command for output - 1.3.6.1.4.1.2606.4.2.5.6.2.1.6
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.7
+    type: gauge
+    help: 'Configuration for output 1: disable remote control (e.g - 1.3.6.1.4.1.2606.4.2.5.6.2.1.7'
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.8
+    type: gauge
+    help: Unsigned Value for delay, after this time the output will fall into the
+      previous state - 1.3.6.1.4.1.2606.4.2.5.6.2.1.8
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: unit3OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.5.6.2.1.9
+    type: gauge
+    help: State for output if timeout (RS422) occurs - 1.3.6.1.4.1.2606.4.2.5.6.2.1.9
+    indexes:
+    - labelname: unit3OutputIndex
+      type: gauge
+  - name: cmcTcUnit3NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.1
+    type: gauge
+    help: Number of alarms that can be created with sensor unit 3 - 1.3.6.1.4.1.2606.4.2.5.7.1
+  - name: unit3MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.1
+    type: gauge
+    help: Index for the list of alarm entries - 1.3.6.1.4.1.2606.4.2.5.7.2.1.1
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.2
+    type: OctetString
+    help: Descriptional text for each message (entry in the table) - 1.3.6.1.4.1.2606.4.2.5.7.2.1.2
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.3
+    type: gauge
+    help: 'Actual message status 1: not available 2: configuration has changed (sensor
+      new, changed, lost) 3: error 4: OK 5: alarm, e.g - 1.3.6.1.4.1.2606.4.2.5.7.2.1.3'
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.4
+    type: gauge
+    help: 'Setup of Alarm relay for this alarm 1: no switching of alarm relay 2: switching
+      of alarm relay - 1.3.6.1.4.1.2606.4.2.5.7.2.1.4'
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.5
+    type: gauge
+    help: 'Setup of Alarm beeper for this alarm 1: no audible alarm 2: audible alarm
+      - 1.3.6.1.4.1.2606.4.2.5.7.2.1.5'
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.6
+    type: gauge
+    help: Trap receiver 1 activated - 1.3.6.1.4.1.2606.4.2.5.7.2.1.6
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.7
+    type: gauge
+    help: Trap receiver 2 activated - 1.3.6.1.4.1.2606.4.2.5.7.2.1.7
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.8
+    type: gauge
+    help: Trap receiver 3 activated - 1.3.6.1.4.1.2606.4.2.5.7.2.1.8
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.9
+    type: gauge
+    help: Trap receiver 4 and Event Logging activated - 1.3.6.1.4.1.2606.4.2.5.7.2.1.9
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: unit3MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.5.7.2.1.10
+    type: gauge
+    help: 'Reset of this alarm 1: auto 2: manual, alarm needs confirmation, e - 1.3.6.1.4.1.2606.4.2.5.7.2.1.10'
+    indexes:
+    - labelname: unit3MsgIndex
+      type: gauge
+  - name: cmcTcUnit3TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.5.1
+    type: gauge
+    help: Type of sensor unit connected to port 3 - 1.3.6.1.4.1.2606.4.2.5.1
+  - name: cmcTcUnit3Text
+    oid: 1.3.6.1.4.1.2606.4.2.5.2
+    type: OctetString
+    help: Descriptional text for sensor unit connected to port 3 - 1.3.6.1.4.1.2606.4.2.5.2
+  - name: cmcTcUnit3Serial
+    oid: 1.3.6.1.4.1.2606.4.2.5.3
+    type: gauge
+    help: Serialnumber of sensor unit connected to port 3 - 1.3.6.1.4.1.2606.4.2.5.3
+  - name: cmcTcUnit3Status
+    oid: 1.3.6.1.4.1.2606.4.2.5.4
+    type: gauge
+    help: General Status sensor unit connected to port 3 (1) OK (2) error, e - 1.3.6.1.4.1.2606.4.2.5.4
+  - name: cmcTcUnit4NumberOfSensors
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.1
+    type: gauge
+    help: Number of sensors connected to sensor unit 4 - 1.3.6.1.4.1.2606.4.2.6.5.1
+  - name: unit4SensorIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.1
+    type: gauge
+    help: Index for the list of value entries - 1.3.6.1.4.1.2606.4.2.6.5.2.1.1
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorType
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.2
+    type: gauge
+    help: 'Type of sensor which is connected to sensor unit 4 to sensor[unit4SensorIndex]
+      1: no sensor connected 2: sensor failure 3: value overflow 4: sensor type 1,
+      access sensor 5: sensor type 2, vibration sensor 6: sensor type 3, motion sensor
+      7: sensor type 4, smoke sensor 8: sensor type 5, air flow sensor 9: sensor type
+      6, reserved 10: sensor type 7, temperature sensor 11: sensor type 8, 4..20mA
+      sensor 12: sensor type 9, humidity sensor 13: user sensor with normally opened
+      contact 14: user sensor with normally closed contact 15: door locked sensor
+      from locking device 16: remote unlock sensor (e.g - 1.3.6.1.4.1.2606.4.2.6.5.2.1.2'
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorText
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.3
+    type: OctetString
+    help: Descriptional text for each sensor (entry in the table) - 1.3.6.1.4.1.2606.4.2.6.5.2.1.3
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.4
+    type: gauge
+    help: Actual status of the sensor - 1.3.6.1.4.1.2606.4.2.6.5.2.1.4
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorValue
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.5
+    type: gauge
+    help: Value of sensor - 1.3.6.1.4.1.2606.4.2.6.5.2.1.5
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.6
+    type: gauge
+    help: Value for high setpoint of sensor - 1.3.6.1.4.1.2606.4.2.6.5.2.1.6
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.7
+    type: gauge
+    help: Value for low setpoint of sensor - 1.3.6.1.4.1.2606.4.2.6.5.2.1.7
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: unit4SensorSetWarn
+    oid: 1.3.6.1.4.1.2606.4.2.6.5.2.1.8
+    type: gauge
+    help: Value for warning setpoint of sensor, also used as fan threshold - 1.3.6.1.4.1.2606.4.2.6.5.2.1.8
+    indexes:
+    - labelname: unit4SensorIndex
+      type: gauge
+  - name: cmcTcUnit4NumberOfOutputs
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.1
+    type: gauge
+    help: Number of outputs available on sensor unit 4 - 1.3.6.1.4.1.2606.4.2.6.6.1
+  - name: unit4OutputIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.1
+    type: gauge
+    help: Index for the list of output entries - 1.3.6.1.4.1.2606.4.2.6.6.2.1.1
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputType
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.2
+    type: gauge
+    help: 'Type of output which is connected to sensor unit 4 to output[unit4OutputIndex]
+      1: no output connected 2: output failure 3: value overflow 4: output type 1,
+      door locking TS8,Ergoform 5: output type 2, universal lock 1, lock with power
+      6: output type 3, universal lock 2, unlock with power 7: output type 4, fan
+      relay 8: output type 5, fan controlled 9: output type 6, universal relay output
+      10: output type 7, room door lock 11: output type 8, power output 12: output
+      type 9, door lock with Master key 13: output type 10, door lock FR(i) 14: setpoint
+      (FCS, RTT) 15: setpoint temperature monitoring (RTT) 16: hysteresis of setpoint
+      (RCT) 17: command for remote control of RCT 18: relay PSM, 1=On, 0=Off 19: high
+      setpoint current monitoring PSM 20: low setpoint current monitoring PSM 21:
+      setpoint temperature RTT 22: setpoint temperature monitoring RTT 23: power output
+      20A 30: control mode LCP 31: min fan speed (fan control) LCP 32: min delta T
+      (fan control) LCP 33: max delta T (fan control) LCP 34: PID controller, KP,
+      LCP 35: PID controller, KI, LCP 36 PID controller, KD, LCP 37 flowrate flowmeter,
+      LCP 38: cw value of water (default: 4187) LCP 39: deltaT, LCP 40: control mode,
+      LCP 42: setpoint high voltage PSM 43: setpoint low voltage PSM 44: setpoint
+      high current PSM 45: setpoint low current PSM 46: command PSM - 1.3.6.1.4.1.2606.4.2.6.6.2.1.2'
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputText
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.3
+    type: OctetString
+    help: Descriptional text for each output (entry in the table) - 1.3.6.1.4.1.2606.4.2.6.6.2.1.3
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.4
+    type: gauge
+    help: Actual status of the output - 1.3.6.1.4.1.2606.4.2.6.6.2.1.4
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputValue
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.5
+    type: gauge
+    help: Value for output - 1.3.6.1.4.1.2606.4.2.6.6.2.1.5
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputSet
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.6
+    type: gauge
+    help: Command for output - 1.3.6.1.4.1.2606.4.2.6.6.2.1.6
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputConfig
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.7
+    type: gauge
+    help: 'Configuration for output 1: disable remote control (e.g - 1.3.6.1.4.1.2606.4.2.6.6.2.1.7'
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputDelay
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.8
+    type: gauge
+    help: Unsigned Value for delay, after this time the output will fall into the
+      previous state - 1.3.6.1.4.1.2606.4.2.6.6.2.1.8
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: unit4OutputTimeoutAction
+    oid: 1.3.6.1.4.1.2606.4.2.6.6.2.1.9
+    type: gauge
+    help: State for output if timeout (RS422) occurs - 1.3.6.1.4.1.2606.4.2.6.6.2.1.9
+    indexes:
+    - labelname: unit4OutputIndex
+      type: gauge
+  - name: cmcTcUnit4NumberOfMsgs
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.1
+    type: gauge
+    help: Number of alarms that can be created with sensor unit 4 - 1.3.6.1.4.1.2606.4.2.6.7.1
+  - name: unit4MsgIndex
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.1
+    type: gauge
+    help: Index for the list of alarm entries - 1.3.6.1.4.1.2606.4.2.6.7.2.1.1
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgText
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.2
+    type: OctetString
+    help: Descriptional text for each message (entry in the table) - 1.3.6.1.4.1.2606.4.2.6.7.2.1.2
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgStatus
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.3
+    type: gauge
+    help: 'Actual message status 1: not available 2: configuration has changed (sensor
+      new, changed, lost) 3: error 4: OK 5: alarm, e.g - 1.3.6.1.4.1.2606.4.2.6.7.2.1.3'
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgRelay
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.4
+    type: gauge
+    help: 'Setup of Alarm relay for this alarm 1: no switching of alarm relay 2: switching
+      of alarm relay - 1.3.6.1.4.1.2606.4.2.6.7.2.1.4'
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.5
+    type: gauge
+    help: 'Setup of Alarm beeper for this alarm 1: no audible alarm 2: audible alarm
+      - 1.3.6.1.4.1.2606.4.2.6.7.2.1.5'
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.6
+    type: gauge
+    help: Trap receiver 1 activated - 1.3.6.1.4.1.2606.4.2.6.7.2.1.6
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.7
+    type: gauge
+    help: Trap receiver 2 activated - 1.3.6.1.4.1.2606.4.2.6.7.2.1.7
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.8
+    type: gauge
+    help: Trap receiver 3 activated - 1.3.6.1.4.1.2606.4.2.6.7.2.1.8
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.9
+    type: gauge
+    help: Trap receiver 4 and Event Logging activated - 1.3.6.1.4.1.2606.4.2.6.7.2.1.9
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: unit4MsgQuit
+    oid: 1.3.6.1.4.1.2606.4.2.6.7.2.1.10
+    type: gauge
+    help: 'Reset of this alarm 1: auto 2: manual, alarm needs confirmation, e - 1.3.6.1.4.1.2606.4.2.6.7.2.1.10'
+    indexes:
+    - labelname: unit4MsgIndex
+      type: gauge
+  - name: cmcTcUnit4TypeOfDevice
+    oid: 1.3.6.1.4.1.2606.4.2.6.1
+    type: gauge
+    help: Type of sensor unit connected to port 4 - 1.3.6.1.4.1.2606.4.2.6.1
+  - name: cmcTcUnit4Text
+    oid: 1.3.6.1.4.1.2606.4.2.6.2
+    type: OctetString
+    help: Descriptional text for sensor unit connected to port 4 - 1.3.6.1.4.1.2606.4.2.6.2
+  - name: cmcTcUnit4Serial
+    oid: 1.3.6.1.4.1.2606.4.2.6.3
+    type: gauge
+    help: Serialnumber of sensor unit connected to port 4 - 1.3.6.1.4.1.2606.4.2.6.3
+  - name: cmcTcUnit4Status
+    oid: 1.3.6.1.4.1.2606.4.2.6.4
+    type: gauge
+    help: General Status sensor unit connected to port 4 (1) OK (2) error, e - 1.3.6.1.4.1.2606.4.2.6.4
+  - name: cmcTcValuesRelay
+    oid: 1.3.6.1.4.1.2606.4.2.7.1
+    type: gauge
+    help: Setup of Alarm relay for alarm ext - 1.3.6.1.4.1.2606.4.2.7.1
+  - name: cmcTcValuesBeeper
+    oid: 1.3.6.1.4.1.2606.4.2.7.2
+    type: gauge
+    help: Setup of Alarm beeper for alarm ext - 1.3.6.1.4.1.2606.4.2.7.2
+  - name: cmcTcValuesTrap1
+    oid: 1.3.6.1.4.1.2606.4.2.7.3
+    type: gauge
+    help: Trap receiver 1 activated - 1.3.6.1.4.1.2606.4.2.7.3
+  - name: cmcTcValuesTrap2
+    oid: 1.3.6.1.4.1.2606.4.2.7.4
+    type: gauge
+    help: Trap receiver 2 activated - 1.3.6.1.4.1.2606.4.2.7.4
+  - name: cmcTcValuesTrap3
+    oid: 1.3.6.1.4.1.2606.4.2.7.5
+    type: gauge
+    help: Trap receiver 3 activated - 1.3.6.1.4.1.2606.4.2.7.5
+  - name: cmcTcValuesTrap4
+    oid: 1.3.6.1.4.1.2606.4.2.7.6
+    type: gauge
+    help: Trap receiver 4 and Event Logging activated - 1.3.6.1.4.1.2606.4.2.7.6
+  - name: cmcTcNumberOfValues
+    oid: 1.3.6.1.4.1.2606.4.2.7.7
+    type: gauge
+    help: Number of values availabel on extension units connected to the CMC - 1.3.6.1.4.1.2606.4.2.7.7
+  - name: valuesIndex
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.1
+    type: gauge
+    help: Index for the list of value entries - 1.3.6.1.4.1.2606.4.2.7.8.1.1
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesText
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.2
+    type: OctetString
+    help: Descriptional text for each value (entry in the table) of the extension
+      card - 1.3.6.1.4.1.2606.4.2.7.8.1.2
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesStatus
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.3
+    type: gauge
+    help: Actual status of the value of the extension card - 1.3.6.1.4.1.2606.4.2.7.8.1.3
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesValue
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.4
+    type: gauge
+    help: Value of sensor - 1.3.6.1.4.1.2606.4.2.7.8.1.4
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesSetHigh
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.5
+    type: gauge
+    help: Value for high setpoint of sensor - 1.3.6.1.4.1.2606.4.2.7.8.1.5
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: valuesSetLow
+    oid: 1.3.6.1.4.1.2606.4.2.7.8.1.6
+    type: gauge
+    help: Value for low setpoint of sensor - 1.3.6.1.4.1.2606.4.2.7.8.1.6
+    indexes:
+    - labelname: valuesIndex
+      type: gauge
+  - name: cmcTcStatusDeviceCMC
+    oid: 1.3.6.1.4.1.2606.4.2.1
+    type: gauge
+    help: General Status of CMC-TC unit itself (1) failed (2) OK - 1.3.6.1.4.1.2606.4.2.1
+  - name: cmcTcUnitsConnected
+    oid: 1.3.6.1.4.1.2606.4.2.2
+    type: gauge
+    help: Number of sensor units connected to the CMC, Port 1 to 4 - 1.3.6.1.4.1.2606.4.2.2
+  - name: cmcTcTimerNumber
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.1
+    type: gauge
+    help: Number of value-table entries=number of outlets available on this unit -
+      1.3.6.1.4.1.2606.4.3.1.8.1
+  - name: cmcTcTimerIndex
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.1
+    type: gauge
+    help: Index for the list of timer entries - 1.3.6.1.4.1.2606.4.3.1.8.2.1.1
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerStatus
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.2
+    type: gauge
+    help: Actual status of the timer - 1.3.6.1.4.1.2606.4.3.1.8.2.1.2
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerDayOfWeek
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.3
+    type: gauge
+    help: Selection of day of week for timer to switch - 1.3.6.1.4.1.2606.4.3.1.8.2.1.3
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeOn
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.4
+    type: OctetString
+    help: 'Time to switch on current function, Format: HH:MM - 1.3.6.1.4.1.2606.4.3.1.8.2.1.4'
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeOff
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.5
+    type: OctetString
+    help: 'Time to switch off current function, Format: HH:MM - 1.3.6.1.4.1.2606.4.3.1.8.2.1.5'
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimeControl
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.6
+    type: gauge
+    help: Control via RTC - 1.3.6.1.4.1.2606.4.3.1.8.2.1.6
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcTimerFunction
+    oid: 1.3.6.1.4.1.2606.4.3.1.8.2.1.7
+    type: gauge
+    help: 'Function which is controlled via timer 1: unlock via keypad 1 on unit 1
+      or remote input lock 1 is disabled 2: unlock via keypad 2 on unit 1 or remote
+      input lock 2 is disabled 3 unlock via keypad 1 on unit 2 or remote input lock
+      1 is disabled 4: unlock via keypad 2 on unit 2 or remote input lock 2 is disabled
+      5: unlock via keypad 1 on unit 3 or remote input lock 1 is disabled 6: unlock
+      via keypad 2 on unit 3 or remote input lock 2 is disabled 7: unlock via keypad
+      1 on unit 4 or remote input lock 1 is disabled 8: unlock via keypad 2 on unit
+      4 or remote input lock 2 is disabled 9: Lock of door 1 on unit 1 will be unlocked
+      10: Lock of door 2 on unit 1 will be unlocked 11: Lock of door 1 on unit 2 will
+      be unlocked 12: Lock of door 2 on unit 2 will be unlocked 13: Lock of door 1
+      on unit 3 will be unlocked 14: Lock of door 2 on unit 3 will be unlocked 15:
+      Lock of door 1 on unit 4 will be unlocked 16: Lock of door 2 on unit 4 will
+      be unlocked 17-20: sending Traps to this Trap receiver will be disabled 21:
+      sending SMS will be disabled generally 22-25: Scheduled alarm off 26-29: sending
+      SMS to phone number 1..4 will be disabled - 1.3.6.1.4.1.2606.4.3.1.8.2.1.7'
+    indexes:
+    - labelname: cmcTcTimerIndex
+      type: gauge
+  - name: cmcTcSetTempUnit
+    oid: 1.3.6.1.4.1.2606.4.3.1.1
+    type: gauge
+    help: Unit of all temperature values and setpoints, Celsius or Fahrenheit - 1.3.6.1.4.1.2606.4.3.1.1
+  - name: cmcTcSetBeeper
+    oid: 1.3.6.1.4.1.2606.4.3.1.2
+    type: gauge
+    help: 'Audible alarm in CMC-TC unit: (2): beeper is on (1): beeper is off (general)
+      - 1.3.6.1.4.1.2606.4.3.1.2'
+  - name: cmcTcQuitRelay
+    oid: 1.3.6.1.4.1.2606.4.3.1.3
+    type: gauge
+    help: Enable or disable acknowledging currently active alarm relay (with 'C' on
+      CMC-TC). - 1.3.6.1.4.1.2606.4.3.1.3
+  - name: cmcTcLogicRelay
+    oid: 1.3.6.1.4.1.2606.4.3.1.4
+    type: gauge
+    help: 'Logic of alarm relay: (1) Relay will pick up in case of an alarm (2) Relay
+      will release in case of an alarm (3) Relay off (general) - 1.3.6.1.4.1.2606.4.3.1.4'
+  - name: cmcTcWebAccess
+    oid: 1.3.6.1.4.1.2606.4.3.1.5
+    type: gauge
+    help: 'Web access via HTTP: (1) view only (2) full Access, read and set (3) Web
+      disabled (general) - 1.3.6.1.4.1.2606.4.3.1.5'
+  - name: cmcTcSetupDate
+    oid: 1.3.6.1.4.1.2606.4.3.1.6
+    type: OctetString
+    help: actual Date in format DD.MM.YYYY - 1.3.6.1.4.1.2606.4.3.1.6
+  - name: cmcTcSetupTime
+    oid: 1.3.6.1.4.1.2606.4.3.1.7
+    type: OctetString
+    help: actual Time in format HH:MM:SS, HH (0-23), MM (0-59), SS (0-59) - 1.3.6.1.4.1.2606.4.3.1.7
+  - name: cmcTcTraptableNumber
+    oid: 1.3.6.1.4.1.2606.4.4.7.1
+    type: gauge
+    help: Number of trapTable entries - 1.3.6.1.4.1.2606.4.4.7.1
+  - name: trapIndex
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.1
+    type: gauge
+    help: Index for the trap-receiver-table - 1.3.6.1.4.1.2606.4.4.7.2.1.1
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: trapStatus
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.2
+    type: gauge
+    help: Enable or disable trap receiver - 1.3.6.1.4.1.2606.4.4.7.2.1.2
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: trapIPaddress
+    oid: 1.3.6.1.4.1.2606.4.4.7.2.1.3
+    type: OctetString
+    help: IP-address of trap-receiver - 1.3.6.1.4.1.2606.4.4.7.2.1.3
+    indexes:
+    - labelname: trapIndex
+      type: gauge
+  - name: cmcTcQuitUnit
+    oid: 1.3.6.1.4.1.2606.4.5.1
+    type: gauge
+    help: Command to quit (acknowledge) alarms of CMC-TC unit - 1.3.6.1.4.1.2606.4.5.1
+  version: 1
